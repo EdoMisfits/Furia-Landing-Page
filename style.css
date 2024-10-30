@@ -1,0 +1,213 @@
+/* Configurações gerais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #FFFFFF;
+}
+
+.bg-home {
+    background-image: 
+        linear-gradient(to bottom, rgba(6, 18, 30, 0.1), #a579019a), 
+        url('assets/tiny.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 50px 0;
+}
+
+
+h1, h2 {
+    color: #FFA500;
+}
+
+a {
+    text-decoration: none;
+    color: #FFA500; 
+}
+
+.header-logo img {
+    max-width: 160px; 
+    height: auto;
+}
+
+/* Header */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-icons a {
+    color: #ffffff; 
+    margin: 0 10px;
+}
+.header-icons a:hover i {
+    animation: translateY 0.8s infinite alternate;
+    color: #f9c500;
+}
+.header-button {
+    background-color: #f9c500;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.header-button:hover {
+    animation: pulse-yellow 1s infinite; 
+}
+
+.hero {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.button-contact {
+    background-color: #FFA500; 
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.about {
+    background: linear-gradient(to bottom, #a579019a, rgba(255, 255, 255, 0)), 
+    url('assets/completo.jpg') no-repeat center center;
+    padding: 50px 20px;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-img {
+    max-width: 50%; 
+    height: auto;
+    border-radius: 8px;
+}
+
+.team-extra-text h2 {
+    font-size: 2.5rem;
+    color: #FFFFFF; 
+}
+
+.team-extra-text p {
+    font-size: 1.2rem;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+.footer-logo img {
+    max-width: 160px; 
+    height: auto;
+}
+.footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-icons a {
+    color: #ffffff;
+    margin: 0 10px;
+}
+.footer-icons a:hover i {
+    animation: translateY 0.8s infinite alternate;
+    color: #f9c500;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse-yellow {
+    0% {
+        background-color: #f9c500;
+        transform: scale(1);
+    }
+    50% {
+        background-color: #ffeb3b; 
+        transform: scale(1.1);
+    }
+    100% {
+        background-color: #f9c500;
+        transform: scale(1);
+    }
+}
+
+@keyframes translateY {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+
+/* Parte resposiva */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .hero {
+        margin: 20px 0;
+    }
+
+    .about-img {
+        max-width: 80%; 
+    }
+
+    .header-button, .button-contact {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .bg-home {
+        padding: 30px 0;
+        height: 80vh;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .team-extra-text h2 {
+        font-size: 2rem;
+    }
+
+    .team-extra-text p {
+        font-size: 1rem;
+    }
+
+    .header-logo img {
+        max-width: 120px;
+    }
+}
